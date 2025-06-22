@@ -29,19 +29,20 @@ public class Boss
             // MPを5減らす
             this.mp -= 5;
             // 魔法攻撃時のログを表示
-        Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
         // MPが5未満の場合 魔法を使えないログ表示。
             else
-            {
+        {
             Debug.Log("MPがたりないため、魔法が使えない。");
-        　　}
+        }
     }
 
 }
 
 public class Test : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,47 +63,33 @@ public class Test : MonoBehaviour
         {
             Debug.Log(array[i]);
         }
-    　　// 課題メモ「for文を使い、配列の各要素の値を逆順に表示してください」
+
+        // 課題メモ「for文を使い、配列の各要素の値を逆順に表示してください」
         // arrayの値を逆順に表示
-        // arrayの値を表示
-        for (int i = 0; i < array.Length; i++)
-        {
-            Debug.Log(array[4]);
-            Debug.Log(array[3]);
-            Debug.Log(array[2]);
-            Debug.Log(array[1]);
-            Debug.Log(array[0]);
-        }   
-        // 課題メモ「for文を使い、配列の各要素の値を逆順に表示してください」
-        // arrayに代入した値の少ない数順にソート
-        Array.Sort(array);
-        // arrayの値を表示
-        for (int i = 0; i < array.Length; i++)
-        {
-            Debug.Log(array[i]);
-        }
-        // 課題メモ「for文を使い、配列の各要素の値を逆順に表示してください」
-        // arrayの値を多い数順にソート
-        Array.Reverse(array);
-        // arrayの値を表示
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 4; i < array.Length; i--)
         {
             Debug.Log(array[i]);
         }
 
+
         // Bossクラスから魔法攻撃を呼び出す
         Boss testboss = new Boss();
+
         // 魔法を繰り返し使い結果をDebug.logに表示する
         for (int i = 0; i < 10; i++)
         {
         testboss.Magic();
         }
-                // Bossクラスから魔法攻撃を呼び出す
-          testboss.Magic();
+        
+        // Bossクラスから魔法攻撃を呼び出す
+        {
+        testboss.Magic();
+        }
+}
         // Update is called once per frame
         void Update()
+
         {
 
         }
-    }
 }
