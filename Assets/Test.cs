@@ -66,21 +66,20 @@ public class Test : MonoBehaviour
 
         // 課題メモ「for文を使い、配列の各要素の値を逆順に表示してください」
         // arrayの値を逆順に表示
-        for (int i = 4; i < array.Length; i--)
+        for (int i = 4; i >= 0; i--)
         {
             Debug.Log(array[i]);
         }
 
 
         // Bossクラスから魔法攻撃を呼び出す
-        Boss testboss = new Boss();
-
-        // 魔法を繰り返し使い結果をDebug.logに表示する
+        Boss testboss = new Boss ();
+        // Magicを繰り返し使い結果をDebug.logに表示する
         for (int i = 0; i < 10; i++)
         {
-        testboss.Magic();
+            testboss.Magic();
         }
-        
+
         // Bossクラスから魔法攻撃を呼び出す
         {
         testboss.Magic();
